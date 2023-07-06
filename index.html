@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neumorphism Profile</title>
+    <title>zouraiz_ali</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -90,17 +90,51 @@
 
             <div class="likes">
 
-                <button class="like">
+                <button class="like" onclick="toggleHeart()">
                     <i class="fa-solid fa-heart"></i>
-                    <p>70</p>
+                    <span id="heartCount">20</span>
+                    <script>
+                        var heartCount = 20;
+                        var heartButton = document.querySelector('.like');
+                        var heartCountElement = document.getElementById('heartCount');
+                      
+                        function toggleHeart() {
+                          if (heartButton.classList.contains('active')) {
+                            heartButton.classList.remove('active');
+                            heartCount--;
+                          } else {
+                            heartButton.classList.add('active');
+                            heartCount++;
+                          }
+                          
+                          heartCountElement.textContent = heartCount;
+                        }
+                      </script>
                 </button>
 
-                <button class="comment">
+                <button class="comment" onclick="submitComment()">
                     <i class="fa-solid fa-comment"></i>
-                    <p>18</p>
+                    <span id="commentCount">12</span>
+                    <script>
+                        var commentCount = 12;
+                        var commentButton = document.querySelector('.comment');
+                        var commentCountElement = document.getElementById('commentCount');
+                      
+                        function submitComment() {
+                          var message = prompt('Enter your comment:');
+                          
+                          if (message) {
+                            commentCount++;
+                            commentButton.classList.add('submitted');
+                            commentCountElement.textContent = commentCount;
+                          }
+                        }
+                      </script>
+                    <!-- <p>18</p> -->
                 </button>
 
-                <button class="share">
+                <button class="share" onclick="generateShareLink()">
+
                     <i class="fa-solid fa-share"></i>
                     <p>9</p>
                 </button>

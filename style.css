@@ -130,19 +130,29 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+    
 }
+
 
 .contaner .box .likes button{
     width: 100px;
     height: 20px;
     background: none;
+    color: gray;
+    transition: color 0.3s ease;
+   
+    
 }
+.contaner .box .likes button.active {
+    color: red;
+  }
 
 .contaner .box .likes button i{
     margin-right: 8px;
 }
 
 .contaner .box .likes .like , .comment{
+    color: grey;
     border-right: 1px solid #919191;
     border-top: 0;
     border-left: 0;
@@ -152,7 +162,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    display: block;
+    margin-bottom: 10px;
+
 }
+.contaner .box .likes .comment button.active {
+    color: red;
+}
+
 
 .contaner .box .likes .share{
     border: 0;
