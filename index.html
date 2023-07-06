@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="contaner">
+
+        <div class="box">
+
+            <div class="image">
+                <img src="image/me.jpg">
+            </div>
+
+            <h2>Zouraiz Ali</h2>
+            <p class="bio">Web designer & Graphics Designer</p>
+
+            <div class="social_icon">
+
+                <div class="s_img">
+                    <img src="image/facebook.png" onclick="fb()" >
+                </div>
+                <div class="s_img">
+                    <img src="image/instergram.png" onclick="instagram()">
+                </div>
+                <div class="s_img">
+                    <img src="image/whatspp_icon.png" onclick="openWhatsApp()">
+                </div>
+                <div class="s_img">
+                    <img src="image/youtube.png" onclick="openWhatsApp()">
+                </div>
+
+            </div>
+
+            <div class="button">
+
+                <button class="message" onclick="openWhatsApp()">Message</button>
+                <script>
+                    function openWhatsApp() {
+                      // Replace "1234567890" with the desired phone number, including the country code
+                      var phoneNumber = "03027989955";
+                      
+                      var url = "https://api.whatsapp.com/send?phone=" + phoneNumber;
+                      
+                      // Open the WhatsApp chat window in a new tab
+                      window.open(url, "_blank");
+
+                      
+                    }
+                    </script>
+                <button class="subs" onclick="openYouTubeChannel()">Subscribe</button>
+                <script>
+                    function openYouTubeChannel() {
+                      // Replace "YOUR_CHANNEL_URL" with the URL of your YouTube channel
+                      var channelURL = "https://www.youtube.com/channel/UCM3B3wp46Y0dMBpvCZGWSnA";
+                      
+                      // Open the YouTube channel in a new tab
+                      window.open(channelURL, "_blank");
+                    }
+                    </script>
+                    <script>
+                        function instagram() {
+                          // Replace "YOUR_CHANNEL_URL" with the URL of your YouTube channel
+                          var insURL = " https://www.instagram.com/zouraiz_ali/";
+                          
+                          // Open the YouTube channel in a new tab
+                          window.open(insURL, "_blank");
+                        }
+                        </script>
+                        
+
+<script>
+    function fb(){
+        var fbURL = " https://www.facebook.com/Zouraizali8/";
+                          
+                          // Open the YouTube channel in a new tab
+                          window.open(fbURL, "_blank");
+
+    }
+</script>
+
+
+            </div>
+
+            <div class="likes">
+
+                <button class="like">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>70.2k</p>
+                </button>
+
+                <button class="comment">
+                    <i class="fa-solid fa-comment"></i>
+                    <p>18.5k</p>
+                </button>
+
+                <button class="share">
+                    <i class="fa-solid fa-share"></i>
+                    <p>9.3k</p>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
